@@ -1,30 +1,38 @@
-body{
-    margin: 0px;
+body {
+    margin: 0;
+    font-family: sans-serif;
 }
-main{
-    margin-left: 20px;
-    margin-right: 20px;
-}
-h1{
-    text-align: center;
-}
-.navbar ul{
-    list-style-type: none;
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: rgb(87, 86, 86);
-    padding: 0px;
-    margin: 0px;
-    overflow: hidden;
+    padding: 0 20px;
 }
-.navbar a{
+
+.logo {
+    color: white;
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.navbarLinks {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbarLinks a {
     color: white;
     text-decoration: none;
-    padding: 15px;
+    padding: 20px 15px;
     display: block;
-    text-align: center;
+    font-size: 1.1rem;
+    transition: background 0.3s;
 }
-.navbar a:hover{
+
+.navbarLinks a:hover {
     background-color: rgb(58, 57, 57);
-}
-.navbar li{
-    float: left;
 }
