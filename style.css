@@ -36,3 +36,29 @@ body {
 .navbarLinks a:hover {
     background-color: rgb(58, 57, 57);
 }
+
+.profile_box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border: 1px solid black;
+    width: 500px;
+    height: 150px;
+    padding: 15px;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+.profile {
+    text-align: left;
+}
+
+.pfp {
+    width: 150px;
+    height: 150px;
+}
+
+.badges img {
+    width: 75px;
+    height: 75px;
+}
