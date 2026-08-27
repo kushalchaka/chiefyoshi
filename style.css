@@ -1,64 +1,212 @@
 body {
     margin: 0;
-    font-family: sans-serif;
+    padding: 0;
+    background-color: #2b99d6;
+    font-family: 'Trebuchet MS', 'Segoe UI', Tahoma, sans-serif;
+    color: #0e2f44;
+}
+
+#topbar {
+    background-color: #1e7ba8;
+    border-bottom: 3px solid #14597d;
 }
 
 .navbar {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    background-color: rgb(87, 86, 86);
-    padding: 0 20px;
+    align-items: flex-end;
+    padding: 15px 20px 0 20px;
 }
 
 .logo {
-    color: white;
-    margin: 0;
-    font-size: 1.8rem;
+    color: #ffffff;
+    margin: 0 0 10px 0;
+    font-size: 2.2rem;
+    letter-spacing: 1px;
 }
 
 .navbarLinks {
     display: flex;
-    list-style-type: none;
+    list-style: none;
     margin: 0;
     padding: 0;
+    gap: 6px;
 }
 
-.navbarLinks a {
-    color: white;
-    text-decoration: none;
-    padding: 20px 15px;
+.navbarLinks li a {
     display: block;
-    font-size: 1.1rem;
-    transition: background 0.3s;
+    padding: 12px 24px;
+    font-size: 1.05rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    color: #0b3752;
+    background-color: #2481b5;
+    border-top: 2px solid #45b7f7;
+    border-left: 2px solid #45b7f7;
+    border-right: 2px solid #134e6e;
+    border-radius: 6px 6px 0 0;
+    transition: background-color 0.2s;
 }
 
-.navbarLinks a:hover {
-    background-color: rgb(58, 57, 57);
+.navbarLinks li.active a {
+    background-color: #f7be4b;
+    color: #2b1f00;
+    border-top: 2px solid #ffe18f;
+    border-left: 2px solid #ffe18f;
+    border-right: 2px solid #b38012;
+}
+
+.navbarLinks li a:hover:not(.active a) {
+    background-color: #16648f;
+    color: #ffffff;
+}
+
+.page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    display: flex;
+    gap: 30px;
+}
+
+.sidebar {
+    width: 440px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 .profile_box {
     display: flex;
     align-items: center;
-    gap: 15px;
-    border: 1px solid black;
-    width: 500px;
-    height: 150px;
-    padding: 15px;
-    margin-top: 15px;
-    margin-left: 15px;
-}
-
-.profile {
-    text-align: left;
+    background-color: #2482b8;
+    border: 3px solid #185a7f;
+    border-radius: 8px;
+    box-shadow: inset 0 0 0 2px #38a2df;
+    padding: 18px;
+    gap: 18px;
 }
 
 .pfp {
-    width: 150px;
-    height: 150px;
+    width: 110px;
+    height: 110px;
+    border: 3px solid #164f6f;
+    border-radius: 6px;
+    background-color: #1d6b97;
+    object-fit: cover;
+}
+
+.profile {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.username {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #082233;
+    letter-spacing: 0.5px;
+    font-variant: small-caps;
+}
+
+.divider {
+    height: 2px;
+    background-color: #175375;
+    margin: 10px 0;
+}
+
+.badges {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.badges a {
+    display: inline-flex;
+    text-decoration: none;
 }
 
 .badges img {
-    width: 75px;
-    height: 75px;
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    image-rendering: pixelated;
+    transition: transform 0.1s;
+}
+
+.badges img:hover {
+    transform: scale(1.15);
+}
+
+.profile-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1.05rem;
+    padding: 10px 16px;
+}
+
+.btn-gold {
+    flex: 2;
+    background-color: #f7be4b;
+    border: 3px solid #a87e1f;
+    color: #3b2a04;
+}
+
+.btn-gold:hover {
+    background-color: #e5b042;
+}
+
+.btn-stat {
+    flex: 1;
+    background-color: #2482b8;
+    border: 3px solid #185a7f;
+    color: #0b344d;
+}
+
+.btn-stat:hover {
+    background-color: #1e6d9b;
+    color: #ffffff;
+}
+
+.sidebar-section {
+    margin-top: 10px;
+}
+
+.section-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin: 0 0 6px 0;
+    color: #0a293c;
+    display: flex;
+    justify-content: space-between;
+}
+
+.section-divider {
+    height: 3px;
+    background-color: #124461;
+    margin-bottom: 12px;
+}
+
+.about-text {
+    font-size: 1.05rem;
+    line-height: 1.5;
+    color: #061924;
+    margin: 0;
 }

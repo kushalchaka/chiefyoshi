@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
-  <title>ChiefYoshi</title>
+  <title>About Me - ChiefYoshi</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -11,10 +11,10 @@
   <div id="topbar">
     <header>
       <nav class="navbar">
-        <h1 class="logo"> ChiefYoshi </h1>
+        <h1 class="logo">ChiefYoshi</h1>
         <ul class="navbarLinks">
           <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Me</a></li>
+          <li class="active"><a href="about.html">About Me</a></li>
           <li><a href="gaming.html">Gaming</a></li>
           <li><a href="art.html">Art</a></li>
           <li><a href="contact.html">Contact</a></li>
@@ -22,7 +22,44 @@
       </nav>
     </header>
   </div>
-  <main>
+  <main class="page-container">
+    <div class="sidebar">
+      <div id="profile_box" class="profile_box">
+        <img class="pfp" src="media/pfp.jpg" alt="Profile Picture">
+        <div id="profile" class="profile">
+          <h1 class="username">ChiefYoshi</h1>
+          <div class="divider"></div>
+          <div id="badges" class="badges">
+            <a href="https://www.exophase.com/user/chiefyoshi" target="_blank" rel="noopener noreferrer">
+              <img title="Exophase" src="media/gaming.png" alt="Exophase">
+            </a>
+            <a href="https://namemc.com/profile/a0fa5a20-0358-46d7-918e-0745889847c1" target="_blank" rel="noopener noreferrer">
+              <img title="NameMC" src="media/minecraft.png" alt="NameMC">
+            </a>
+            <a href="https://25karma.xyz/player/ChiefYoshi" target="_blank" rel="noopener noreferrer">
+              <img title="Hypixel" src="media/hypixel.png" alt="Hypixel">
+            </a>
+            <a href="https://www.youtube.com/ChiefYoshi" target="_blank" rel="noopener noreferrer">
+              <img title="YouTube" src="media/youtube.png" alt="YouTube">
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="profile-actions">
+        <button class="btn btn-gold">Contact</button>
+        <button class="btn btn-stat">3.3k+ hrs</button>
+        <button class="btn btn-stat">...</button>
+      </div>
+
+      <div class="sidebar-section">
+        <h2 class="section-title">About <span>&#9650;</span></h2>
+        <div class="section-divider"></div>
+        <p class="about-text">
+          Welcome to my profile! Track my gaming backlog, stats, art, and projects here.
+        </p>
+      </div>
+    </div>
   </main>
   <footer>
   </footer>
