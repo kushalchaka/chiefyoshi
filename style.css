@@ -152,7 +152,9 @@ body {
 }
 
 .btn {
-    display: inline-block;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     text-decoration: none;
     border-radius: 6px;
@@ -162,8 +164,8 @@ body {
     font-size: 1.05rem;
     padding: 10px 16px;
     box-sizing: border-box;
+    line-height: 1.2;
 }
-
 .btn-gold {
     flex: 2;
     background-color: #f7be4b;
